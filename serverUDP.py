@@ -3,7 +3,7 @@ import socket
 mensajes = []
 
 server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-server.bind(('0.0.0.0', 9999))
+server.bind(('127.0.0.1', 9999))
 
 print("Servidor UDP escuchando en el puerto 9999...")
 
@@ -26,8 +26,7 @@ while True:
 
         print("\n--- Mensajes almacenados ---")
         for f in mensajes:
-            for c in f:
-                print(c)
+            print(f)
             print()
 
         respuesta = (
